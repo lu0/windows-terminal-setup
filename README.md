@@ -16,3 +16,16 @@ This repository contains my setup for the [Windows Terminal](https://en.wikipedi
     - [My variation of Fancy Bash](https://github.com/lu0/dotfiles_linuxMint/blob/master/bash/fancy-bash.sh) (must be installed).
 
 ![Windows Terminal with WSL2 using custom settings](assets/windows-terminal-wsl2.png)
+
+## Install
+Close the Windows Terminal if open, then go to the Windows Terminal's settings folder:
+```sh
+cd /mnt/c/Users/<YOUR_WINDOWS_USER>/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe
+```
+
+And clone the repository under `LocalState`
+```sh
+git clone https://github.com/lu0/windows-terminal-setup LocalState
+```
+
+**Note**: You might need to modify the profile's guid.
