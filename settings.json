@@ -300,6 +300,12 @@
                 "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
                 "name": "PowerShell",
                 "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "CMD",
+                "startingDirectory": "%USERPROFILE%"
             }
         ]
     },
