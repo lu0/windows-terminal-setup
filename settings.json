@@ -266,25 +266,31 @@
     "defaultProfile": "Ubuntu-20.04",
     "disableAnimations": true,
     "largePasteWarning": false,
+    "launchMode": "default",
     "multiLinePasteWarning": false,
     "profiles": 
     {
         "defaults": 
         {
             "antialiasingMode": "cleartype",
-            "altGrAliasing": true,
+            "altGrAliasing": false,
             "hidden": false,
             "useAcrylic": false,
             "bellStyle": "none",
             "colorScheme": "dotfiles_LinuxMint",
+            "closeOnExit": "graceful",
             "cursorShape": "filledBox",
             "font": 
             {
                 "face": "Source Code Pro",
                 "size": 12,
-                "weight": "medium"
+                "weight": "medium",
             },
-            "suppressApplicationTitle": false
+            "historySize": 10000,
+            "snapOnInput": true,
+            "tabColor": "#212121",
+            "suppressApplicationTitle": false,
+            "padding": "8, 8, 8, 8"
         },
         "list": 
         [
