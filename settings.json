@@ -318,7 +318,8 @@
     "disabledProfileSources": [
         "Windows.Terminal.Azure",
         "Windows.Terminal.PowershellCore",
-        "Windows.Terminal.Wsl"
+        "Windows.Terminal.Wsl",
+        "Git"
     ],
     "schemes": 
     [
