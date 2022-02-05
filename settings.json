@@ -302,6 +302,11 @@
                 "padding": "0"
             },
             {
+                "commandline": "wsl -d Ubuntu-20.04 --exec python3",
+                "icon": "https://raw.githubusercontent.com/python/cpython/ba650af7/PC/icons/logox128.png",
+                "name": "Python"
+            },
+            {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
                 "name": "PowerShell",
