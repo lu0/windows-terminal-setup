@@ -255,7 +255,7 @@
     "confirmCloseAllTabs": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{cf11f88d-2a1d-43ae-82a5-e6c7fe2a9ce7}",
+    "defaultProfile": "Ubuntu-20.04",
     "disableAnimations": true,
     "largePasteWarning": false,
     "multiLinePasteWarning": false,
@@ -264,6 +264,9 @@
         "defaults": 
         {
             "antialiasingMode": "cleartype",
+            "altGrAliasing": true,
+            "hidden": false,
+            "useAcrylic": false,
             "bellStyle": "none",
             "colorScheme": "dotfiles_LinuxMint",
             "cursorShape": "filledBox",
@@ -278,17 +281,19 @@
         "list": 
         [
             {
+                "commandline": "wsl.exe -d Ubuntu-20.04",
                 "closeOnExit": "never",
-                "guid": "{cf11f88d-2a1d-43ae-82a5-e6c7fe2a9ce7}",
-                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
                 "name": "Ubuntu-20.04",
-                "padding": "0",
-                "snapOnInput": true,
-                "source": "Windows.Terminal.Wsl",
-                "useAcrylic": false
+                "padding": "0"
             }
         ]
     },
+    "disabledProfileSources": [
+        "Windows.Terminal.Azure",
+        "Windows.Terminal.PowershellCore",
+        "Windows.Terminal.Wsl"
+    ],
     "schemes": 
     [
         {
