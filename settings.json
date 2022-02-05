@@ -166,6 +166,14 @@
         {
             "command": 
             {
+                "action": "moveFocus",
+                "direction": "nextInOrder"
+            },
+            "keys": "alt+shift+x"
+        },
+        {
+            "command": 
+            {
                 "action": "newTab"
             },
             "keys": "ctrl+t"
