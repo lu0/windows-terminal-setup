@@ -263,7 +263,7 @@
     "confirmCloseAllTabs": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "Ubuntu-20.04",
+    "defaultProfile": "Linux",
     "disableAnimations": true,
     "largePasteWarning": false,
     "launchMode": "default",
@@ -295,14 +295,14 @@
         "list": 
         [
             {
-                "commandline": "wsl.exe -d Ubuntu-20.04",
+                "commandline": "wsl.exe",
                 "closeOnExit": "never",
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "Ubuntu-20.04",
+                "name": "Linux",
                 "padding": "0"
             },
             {
-                "commandline": "wsl -d Ubuntu-20.04 --exec python3",
+                "commandline": "wsl --exec python3",
                 "icon": "https://raw.githubusercontent.com/python/cpython/ba650af7/PC/icons/logox128.png",
                 "name": "Python"
             },
