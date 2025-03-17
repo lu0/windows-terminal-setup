@@ -3,8 +3,8 @@
 This repository contains my setup for the [Windows Terminal](https://en.wikipedia.org/wiki/Windows_Terminal), as I almost exclusively use WSL on Windows and find the built-in terminals for WSL, Python, Powershell, and CMD really ugly and cumbersome.
 
 - Shells/Profiles
-    - Defaults to Ubuntu-20.04 ([must be installed with WSL](https://docs.microsoft.com/en-us/windows/wsl/install#install)).
-    - Python
+    - Defaults to the default WSL distribution ([WSL must be installed](https://docs.microsoft.com/en-us/windows/wsl/install#install)).
+    - Python (within WSL)
     - Powershell
     - CMD
 - Global keybindings
