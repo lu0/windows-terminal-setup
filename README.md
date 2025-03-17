@@ -1,47 +1,75 @@
 # Windows Terminal - Setup
 
-This repository contains my setup for the [Windows Terminal](https://en.wikipedia.org/wiki/Windows_Terminal), as I almost exclusively use WSL on Windows and find the built-in terminals for WSL, Python, Powershell, and CMD really ugly and cumbersome.
-
-- Shells/Profiles
-    - Defaults to the default WSL distribution ([WSL must be installed](https://docs.microsoft.com/en-us/windows/wsl/install#install)).
-    - Python (within WSL)
-    - Powershell
-    - CMD
-- Global keybindings
-    - Similar to the ones I use on [VSCode](https://github.com/lu0/vscode-settings).
-        - Tab navigation
-        - Pane navigation/resizing
-        - Etc.
-- Color Scheme
-    - Similar to the ones of [my Linux Dotfiles](https://github.com/lu0/dotfiles_linuxMint#terminal) and [my VSCode theme](https://github.com/lu0/vscode-theme-interplanetary-craft).
-- Font
-    - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) (must be installed).
-- Prompt (WSL profiles only)
-    - [My variation of Fancy Bash](https://github.com/lu0/dotfiles_linuxMint/blob/master/bash/fancy-bash.sh) (should be installed within the WSL distro).
+This repository contains my configuration for [Windows Terminal](https://en.wikipedia.org/wiki/Windows_Terminal). I created this setup because I primarily use WSL on Windows and found the default terminals for WSL, Python, PowerShell, and CMD lacking in usability and appearance.
 
 ![Windows Terminal using my settings](assets/windows-terminal-custom.png)
 
-## Install
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Customization](#customization)
+- [Common Issues](#common-issues)
 
-1. Close the Windows Terminal if open.
-2. Open powershell.
+## Features
+
+- **Shells/Profiles**
+  - Uses your default WSL distribution
+  - Python (within WSL)
+  - PowerShell
+  - CMD
+
+- **Keyboard Shortcuts**
+  - Tab navigation (create, close, switch)
+  - Pane management (split, navigate, resize)
+  - Clipboard operations
+  - Profile switching: 
+    - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> for Linux
+    - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd> for Python
+    - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd> for PowerShell
+    - <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>4</kbd> for CMD
+  - Similar to my [VSCode settings](https://github.com/lu0/vscode-settings)
+
+- **Appearance**
+  - Color scheme matching [my Linux Dotfiles](https://github.com/lu0/dotfiles_linuxMint#terminal) and [VSCode theme](https://github.com/lu0/vscode-theme-interplanetary-craft)
+  - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) font
+  - Custom prompt for WSL using [my Fancy Bash variation](https://github.com/lu0/dotfiles_linuxMint/blob/master/bash/fancy-bash.sh)
+
+## Requirements
+
+- [Windows Terminal](https://github.com/Microsoft/Terminal)
+- [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install#install) with at least one Linux distribution
+- [Source Code Pro font](https://github.com/adobe-fonts/source-code-pro/releases) installed on Windows (TTF recommended)
+- (Optional) [My Fancy Bash prompt](https://github.com/lu0/dotfiles_linuxMint/blob/master/bash/fancy-bash.sh) for the custom WSL prompt
+
+## Installation
+
+1. Close the Windows Terminal if it's running
+2. Open PowerShell
 3. Enter WSL with the `wsl` command
-4. Go to the Windows Terminal's settings folder:
+4. Go to the Windows Terminal settings folder:
+   ```sh
+   cd "/mnt/c/Users/$(whoami.exe | cut -d'\' -f2 | tr -d '\r')/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe"
+   ```
+5. Back up your existing configuration if needed:
+   ```sh
+   cp -r LocalState LocalState_backup
+   ```
+6. Remove the default configuration:
+   ```sh
+   rm -rf LocalState
+   ```
+7. Clone this repository:
+   ```sh
+   git clone https://github.com/lu0/windows-terminal-setup LocalState
+   ```
+8. Exit WSL and PowerShell, then open the Windows Terminal
 
-    ```sh
-    cd "/mnt/c/Users/$(whoami.exe | cut -d'\' -f2 | tr -d '\r')/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe"
-    ```
+## Customization
 
-5. Remove the default configuration. NOTE: Make sure to back this up if you have a existing configuration.
+You can edit `settings.json` in the LocalState folder to further adjust the terminal to your needs.
 
-    ```sh
-    rm -rf LocalState
-    ```
+## Common Issues
 
-6. Clone the repository under `LocalState`
-
-    ```sh
-    git clone https://github.com/lu0/windows-terminal-setup LocalState
-    ```
-    
-7. Exit powershell and open the Windows Terminal.
+- If Windows Terminal doesn't load, check for errors in `settings.json`
+- For WSL issues, verify your Linux distribution is properly installed
+- Font problems usually mean Source Code Pro isn't installed correctly
