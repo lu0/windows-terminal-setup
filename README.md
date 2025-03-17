@@ -17,17 +17,31 @@ This repository contains my setup for the [Windows Terminal](https://en.wikipedi
 - Font
     - [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) (must be installed).
 - Prompt (WSL profiles only)
-    - [My variation of Fancy Bash](https://github.com/lu0/dotfiles_linuxMint/blob/master/bash/fancy-bash.sh) (must be installed within the WSL distro).
+    - [My variation of Fancy Bash](https://github.com/lu0/dotfiles_linuxMint/blob/master/bash/fancy-bash.sh) (should be installed within the WSL distro).
 
 ![Windows Terminal using my settings](assets/windows-terminal-custom.png)
 
 ## Install
-Close the Windows Terminal if it's open, then go to the Windows Terminal's settings folder:
-```sh
-cd /mnt/c/Users/<YOUR_WINDOWS_USER>/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe
-```
 
-Clone the repository under `LocalState`
-```sh
-git clone https://github.com/lu0/windows-terminal-setup LocalState
-```
+1. Close the Windows Terminal if open.
+2. Open powershell.
+3. Enter WSL with the `wsl` command
+4. Go to the Windows Terminal's settings folder:
+
+    ```sh
+    cd "/mnt/c/Users/$(whoami.exe | cut -d'\' -f2 | tr -d '\r')/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe"
+    ```
+
+5. Remove the default configuration. NOTE: Make sure to back this up if you have a existing configuration.
+
+    ```sh
+    rm -rf LocalState
+    ```
+
+6. Clone the repository under `LocalState`
+
+    ```sh
+    git clone https://github.com/lu0/windows-terminal-setup LocalState
+    ```
+    
+7. Exit powershell and open the Windows Terminal.
